@@ -1,0 +1,160 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 25, 2025, 6:58:05 PM
+    Author     : devcr
+*/
+
+*{
+    -fx-base-color-focus:#09b6bc;
+    -fx-base-color-etiquetas:#4d4d4d;
+    -fx-base-color-titulos:#51b6cd;
+}
+
+.mfx-text-field{
+    -mfx-main: -fx-base-color-focus;
+    -fx-promt-text-fill: -fx-base-color-etiquetas;
+    -mfx-float-mode:BODER;
+    -fx-font-size:14px;
+    -fx-min-height:40px;
+    -fx-pref-height:40px;
+    -fx-max-height:40px;
+    -fx-text-fill:black;
+    -fx-alignment:TOP_LEFT;
+}
+
+.mfx-checkbox{
+    -mfx-main: -fx-base-color-focus;
+    -fx-font-size:14px;
+    -fx-min-height:26px;
+    -fx-pref-height:26px;
+    -fx-max-height:26px;
+    -fx-text-fill: -fx-base-color-etiquetas;
+}
+
+.mfx-date-picker {
+    -fx-font-size:14px;
+    -fx-min-height:40px;
+    -fx-pref-height:40px;
+    -fx-max-height:40px;
+}
+
+.mfx-date-picker:focus-within .icon {
+    -mfx-color: -fx-base-color-focus;
+}
+
+.mfx-date-picker .date-picker-popup .months-combo:focus-within,
+.mfx-date-picker .date-picker-popup .years-combo:focus-within {
+    -fx-text-fill: -fx-base-color-focus;
+}
+
+.mfx-date-picker .date-picker-popup .months-combo .virtual-flow .mfx-combo-box-cell:selected .label,
+.mfx-date-picker .date-picker-popup .years-combo .virtual-flow .mfx-combo-box-cell:selected .label {
+    -fx-text-fill: -fx-base-color-focus;
+}
+
+.mfx-date-cell:current {
+    -fx-text-fill: -fx-base-color-focus;
+    -fx-background-color: #F7F6F9;
+
+}
+
+.mfx-date-cell:selected {
+    -fx-text-fill: white;
+    -fx-background-color:  -fx-base-color-focus;
+}
+
+.mfx-button{
+    -mfx-button-type: RAISED;
+    -fx-opacity:0.8;
+    -fx-content-display:left;
+    -fx-text-fill:white;
+    -fx-fond-weight:bold;
+    -fx-font-size:14px;
+    -fx-alignment:CENTER_LEFT;
+}
+
+.mfx-button:hover {
+    -fx-background-color: #FF6D00;
+}
+
+.jfx-btn-new,.jfx-btn-new:armed,.jfx-btn-new:focused{
+    -fx-background-color:#2196F3;
+}
+
+.jfx-btn-new > ImageView{
+    -fx-image:url("../resources/Agregar-48.png");
+}
+
+.jfx-btn-delete,
+.jfx-btn-delete:armed,
+.jfx-btn-delete:focused {
+    -fx-background-color: #EF5350;
+}
+
+.jfx-btn-delete > ImageView{
+    -fx-image:url("../resources/Eliminar-48.png");
+}
+
+.jfx-btn-search,
+.jfx-btn-search:armed,
+.jfx-btn-search:focused {
+    -fx-background-color: #4DD0E1;
+}
+
+.jfx-btn-search > ImageView{
+    -fx-image:url("../resources/Buscar-48.png");
+}
+
+.jfx-btn-save,
+.jfx-btn-save:armed,
+.jfx-btn-save:focused {
+    -fx-background-color: #66BB6A;
+}
+
+.jfx-btn-save > ImageView{
+    -fx-image:url("../resources/Guardar-48.png");
+}
+
+.separator{
+    -fx-background-color:-fx-base-color-focus;
+}
+
+.jfx-background-pane{
+    -fx-background-color:-fx-base-color-focus;
+}
+
+.jfx-background-pane > AnchorPane{
+    -fx-background-color:white;
+    -fx-border-color: #B0B0B0;         /* gris claro */
+    -fx-border-width: 8px;             /* grosor del borde */
+    /*-fx-border-radius: 5px;           /*esquinas redondeadas opcional */
+    -fx-background-radius: 5px;        /* que el fondo coincida con el borde redondeado */
+    -fx-padding: 10px;                 /* opcional para que no quede tan pegado el contenido */
+}
+.jfx-tittle-label{
+    -fx-font-size:24px;
+    -fx-padding:5 0 5 0;
+    -fx-text-fill:-fx-base-color-focus;
+    -fx-font-weight:bold;
+    -fx-effect:dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 2, 0.0, 1, 2);
+}
+
+.mfx-radio-button {
+    -mfx-main: -fx-base-color-focus;
+    -mfx-secondary: -fx-base-color-focus;
+    -fx-text-fill: -fx-base-color-etiquetas;
+}
+
+.mfx-radio-button:hover {
+    -mfx-main: #14cbd1;       
+    -mfx-secondary: #14cbd1;
+}
+
+.mfx-radio-button:disabled {
+    -mfx-main: #a0dadd;
+    -mfx-secondary: #a0dadd;
+    -fx-opacity: 0.6;
+}

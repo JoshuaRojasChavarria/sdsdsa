@@ -1,0 +1,12 @@
+cr\ac\una\unaplanilla\util\AppContext.class
+cr\ac\una\unaplanilla\controller\PrincipalViewController.class
+cr\ac\una\unaplanilla\controller\Controller.class
+cr\ac\una\unaplanilla\util\FlowController.class
+cr\ac\una\unaplanilla\model\EmployeeDto.class
+cr\ac\una\unaplanilla\util\Mensaje.class
+cr\ac\una\unaplanilla\util\BindingUtils.class
+cr\ac\una\unaplanilla\App.class
+cr\ac\una\unaplanilla\controller\LogInViewController.class
+cr\ac\una\unaplanilla\controller\PlanillaTypesViewController.class
+cr\ac\una\unaplanilla\util\Formato.class
+cr\ac\una\unaplanilla\controller\EmployeesViewController.class
