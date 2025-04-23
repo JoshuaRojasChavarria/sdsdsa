@@ -11,13 +11,15 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
+import cr.ac.una.unaplanilla.util.AppContext;
 
 /**
  * FXML Controller class
  *
  * @author devcr
  */
-public class PrincipalViewController implements Initializable {
+public class PrincipalViewController extends Controller implements Initializable {
 
     @FXML
     private MFXButton btnEmployers;
@@ -27,13 +29,22 @@ public class PrincipalViewController implements Initializable {
     private MFXButton btnLogOut;
     @FXML
     private MFXButton btnExit;
+    @FXML
+    private Label lblUser;
+    
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
+         if(AppContext.getInstance().get("Usuario")==null){
+         lblUser.setText("Sin iniciar");
+         }else{
+        lblUser.setText(AppContext.getInstance().get("Usuario").toString());
+         }
+ 
     }    
 
     @FXML
@@ -49,11 +60,18 @@ public class PrincipalViewController implements Initializable {
     @FXML
     private void onActionLogOut(ActionEvent event) {
         
+        FlowController.getInstance().goViewInWindow("logInView");
+        FlowController.getInstance().salir();
     }
 
     @FXML
     private void onActionBtnExit(ActionEvent event) {
         FlowController.getInstance().salir();
     }
+
+    @Override
+    public void initialize() {
+    }
+
     
 }

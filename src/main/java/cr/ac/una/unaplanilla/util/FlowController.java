@@ -19,6 +19,7 @@ import cr.ac.una.unaplanilla.controller.Controller;
 import io.github.palexdev.materialfx.css.themes.MFXThemeManager;
 import io.github.palexdev.materialfx.css.themes.Themes;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
 
 public class FlowController {
 
@@ -112,7 +113,7 @@ public class FlowController {
                 VBox vBox = (VBox)borderPane.getCenter();
                 vBox.getChildren().clear();
                 vBox.getChildren().add(loader.getRoot());
-                        
+                vBox.setVgrow(loader.getRoot(), javafx.scene.layout.Priority.ALWAYS);
                 /*VBox vBox = ((VBox) ((BorderPane) stage.getScene().getRoot()).getCenter());
                 vBox.getChildren().clear();
                 vBox.getChildren().add(loader.getRoot());*/

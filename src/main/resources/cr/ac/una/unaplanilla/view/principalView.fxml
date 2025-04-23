@@ -11,39 +11,61 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.unaplanilla.controller.PrincipalViewController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.unaplanilla.controller.PrincipalViewController">
    <top>
-      <HBox alignment="CENTER" prefHeight="38.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="38.0" prefWidth="600.0" BorderPane.alignment="TOP_RIGHT">
          <children>
-            <Label text="UNA Planilla">
+            <Label alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="177.0" text="Sistema UnaPlanilla" textAlignment="RIGHT" textFill="#8d0101" HBox.hgrow="ALWAYS">
                <font>
-                  <Font size="30.0" />
+                  <Font size="20.0" />
                </font>
             </Label>
+            <ImageView fitHeight="36.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/Casa-48.png" />
+               </image>
+            </ImageView>
          </children>
       </HBox>
    </top>
    <left>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="430.0" prefWidth="131.0" BorderPane.alignment="CENTER">
          <children>
             <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
                   <AnchorPane prefHeight="64.0" prefWidth="111.0">
                      <children>
-                        <ImageView fitHeight="75.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="62.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="6.0">
                            <image>
                               <Image url="@../resources/FondoInicioRojo.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="56.0" fitWidth="43.0" layoutX="34.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="10.0">
+                        <ImageView fitHeight="56.0" fitWidth="43.0" layoutX="40.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="9.5" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="9.5">
                            <image>
                               <Image url="@../resources/LogoUNArojo.png" />
                            </image>
                         </ImageView>
                      </children>
                   </AnchorPane>
-                  <MFXButton fx:id="btnEmployers" buttonType="RAISED" maxWidth="1.7976931348623157E308" onAction="#onActionEmployers" text="Empleados" VBox.vgrow="ALWAYS" />
-                  <MFXButton fx:id="btnPlanillaType" buttonType="RAISED" maxWidth="1.7976931348623157E308" onAction="#onActionPlanillaType" text="Tipos Planillas" VBox.vgrow="ALWAYS" />
+                  <HBox maxWidth="1.7976931348623157E308" prefHeight="32.0" prefWidth="121.0" spacing="10.0" styleClass="jfk-vbox-shadow" stylesheets="@Styles.css">
+                     <children>
+                        <ImageView fitHeight="26.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/user.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lblUser" maxWidth="1.7976931348623157E308" prefHeight="39.0" prefWidth="83.0" styleClass="jfx-User-label" stylesheets="@Styles.css" text="Sin definir" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <MFXButton fx:id="btnEmployers" buttonType="RAISED" maxWidth="1.7976931348623157E308" onAction="#onActionEmployers" styleClass="jfx-btn-Empleados-TipoPlantillas" stylesheets="@Styles.css" text="Empleados" VBox.vgrow="ALWAYS" />
+                  <MFXButton fx:id="btnPlanillaType" buttonType="RAISED" maxWidth="1.7976931348623157E308" onAction="#onActionPlanillaType" styleClass="jfx-btn-Empleados-TipoPlantillas" stylesheets="@Styles.css" text="Tipos Planillas" VBox.vgrow="ALWAYS" />
                </children>
                <VBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -51,12 +73,15 @@
             </VBox>
             <VBox alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308" prefHeight="200.0" prefWidth="59.0" spacing="10.0" VBox.vgrow="ALWAYS">
                <children>
-                  <MFXButton fx:id="btnLogOut" buttonType="RAISED" maxWidth="1.7976931348623157E308" onAction="#onActionLogOut" text="Cerrar Sesion" VBox.vgrow="ALWAYS">
+                  <MFXButton fx:id="btnLogOut" buttonType="RAISED" maxWidth="1.7976931348623157E308" onAction="#onActionLogOut" styleClass="jfx-btn-CerrarSesion-Salir" stylesheets="@Styles.css" text="Cerrar Sesion" VBox.vgrow="ALWAYS">
                      <VBox.margin>
-                        <Insets />
+                        <Insets left="5.0" right="5.0" />
                      </VBox.margin>
                   </MFXButton>
-                  <MFXButton fx:id="btnExit" buttonType="RAISED" maxWidth="1.7976931348623157E308" onAction="#onActionBtnExit" text="Salir" />
+                  <MFXButton fx:id="btnExit" buttonType="RAISED" maxWidth="1.7976931348623157E308" onAction="#onActionBtnExit" styleClass="jfx-btn-CerrarSesion-Salir" stylesheets="@Styles.css" text="Salir">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin></MFXButton>
                </children>
                <VBox.margin>
                   <Insets />

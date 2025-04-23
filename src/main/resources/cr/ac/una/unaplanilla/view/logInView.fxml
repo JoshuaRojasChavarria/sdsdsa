@@ -10,9 +10,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.RadialGradient?>
-<?import javafx.scene.paint.Stop?>
 
 <AnchorPane fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.unaplanilla.controller.LogInViewController">
    <children>
@@ -51,30 +48,16 @@
                               <Image url="@../resources/Contraseña-48.png" />
                            </image>
                         </ImageView>
-                        <MFXPasswordField fx:id="psfPassword" floatMode="BORDER" floatingText="Contraseña" maxWidth="1.7976931348623157E308" prefHeight="36.0" prefWidth="430.0" HBox.hgrow="ALWAYS" />
+                        <MFXPasswordField fx:id="psfPassword" floatMode="BORDER" floatingText="Contraseña" maxWidth="1.7976931348623157E308" prefHeight="36.0" prefWidth="430.0" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin></MFXPasswordField>
                      </children>
                   </HBox>
                   <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="25.0">
                      <children>
-                        <MFXButton fx:id="btnCancel" alignment="TOP_LEFT" buttonType="RAISED" depthLevel="LEVEL4" onAction="#onActionBtnCancel" prefWidth="150.0" style="-fx-background-color: #42A5F5;" text="Cancelar">
-                           <textFill>
-                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
-                                 <stops>
-                                    <Stop>
-                                       <color>
-                                          <Color />
-                                       </color>
-                                    </Stop>
-                                    <Stop offset="1.0">
-                                       <color>
-                                          <Color red="1.0" green="1.0" blue="1.0" />
-                                       </color>
-                                    </Stop>
-                                 </stops>
-                              </RadialGradient>
-                           </textFill>
-                        </MFXButton>
-                        <MFXButton fx:id="btnSignIn" alignment="TOP_LEFT" buttonType="RAISED" depthLevel="LEVEL4" onAction="#onActionBtnSignIn" prefWidth="150.0" style="-fx-background-color: #42A5F5;" text="Ingresar" />
+                        <MFXButton fx:id="btnCancel" alignment="CENTER" buttonType="RAISED" depthLevel="LEVEL3" onAction="#onActionBtnCancel" prefHeight="38.0" prefWidth="150.0" style="-fx-background-color: #42A5F5;" text="Cancelar" textAlignment="CENTER" />
+                        <MFXButton fx:id="btnSignIn" alignment="CENTER" buttonType="RAISED" depthLevel="LEVEL3" onAction="#onActionBtnSignIn" prefHeight="38.0" prefWidth="150.0" style="-fx-background-color: #42A5F5;" text="Ingresar" textAlignment="CENTER" />
                      </children>
                      <padding>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

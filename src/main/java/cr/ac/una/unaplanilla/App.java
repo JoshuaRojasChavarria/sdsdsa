@@ -8,33 +8,28 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import javafx.scene.image.Image;
 
 /**
  * JavaFX App
  */
+
 public class App extends Application {
 
     private static Scene scene;
     
-    public int factorial(Integer n){
-        if(n < 1) return 1;
-        
-        return n * factorial(n-1); 
-    }
 
     @Override
     public void start(Stage stage) throws IOException {
         FlowController.getInstance().InitializeFlow(stage, null);
         stage.getIcons().add(new Image("cr/ac/una/unaplanilla/resources/LogoUNArojo.png"));
-        FlowController.getInstance().goViewInWindow("logInView");
         
         scene = new Scene(loadFXML("logInView"), 640, 480);
         MFXThemeManager.addOn(scene, Themes.DEFAULT, Themes.LEGACY);
         stage.setScene(scene);
         stage.show();
+        
     }
 
     public static void setRoot(String fxml) throws IOException {

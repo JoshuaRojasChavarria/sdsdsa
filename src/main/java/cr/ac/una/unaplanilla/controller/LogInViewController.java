@@ -50,28 +50,31 @@ public class LogInViewController extends Controller implements Initializable {
 
     @FXML
     void onActionBtnCancel(ActionEvent event) {
-        new Mensaje().show(Alert.AlertType.INFORMATION, "Usuario",AppContext.getInstance().get("Usuario").toString());
+        FlowController.getInstance().goMain();
     }
 
     @FXML
     void onActionBtnSignIn(ActionEvent event) {
-        AppContext.getInstance().set("Usuario", txfUser.getText());
-        AppContext.getInstance().set("Contraseña", psfPassword.getText());
+        String usuario = txfUser.getText();
+        String contrasena = psfPassword.getText();
         
-        
-        FlowController.getInstance().goMain();
-
+        if (usuario.length() >= 4 && contrasena.length() >= 4) {
+            AppContext.getInstance().set("Usuario", usuario);
+            AppContext.getInstance().set("Contraseña", contrasena);
+            FlowController.getInstance().goMain();
+        } else {
+            new Mensaje().show(Alert.AlertType.WARNING, "Error de Inicio de Sesión", "El usuario y la contraseña deben tener al menos 4 caracteres.");
+        }
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         BackgroundImage.fitHeightProperty().bind(root.heightProperty());
         BackgroundImage.fitWidthProperty().bind(root.widthProperty());
-    }    
+    }
 
     @Override
     public void initialize() {
         
     }
-    
 }
